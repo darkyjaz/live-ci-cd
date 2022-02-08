@@ -9,19 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      -name: Check out code
+      - name: Check out code 👌
         uses: actions/checkout@v2
 
-      -name: Setup .Net 6
-        uses: actions/setup-dotnet@v1.9.0
+      - name: Setup .Net 6 🔨 
+        uses: actions/setup-dotnet@v1
         with:
           dotnet-version: '6.0.x'
 
-      -name: Restore dependencies
-       run: dotnet restore
+      - name: Restore dependencies ⚙
+        run: dotnet restore
 
-      -name: Build our app
-       run: dotnet build -c Release --no-restore
+      - name: Build our app 🔧 
+        run: dotnet build -c Release --no-restore
 
 
 
