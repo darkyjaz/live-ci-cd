@@ -9,7 +9,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
+      -name: Check out code
         uses: actions/checkout@v2
 
       -name: Setup .Net 6
@@ -22,7 +22,7 @@ jobs:
 
       -name: Build our app
        run: dotnet build -c Release --no-restore
-       
+
 
 
 
