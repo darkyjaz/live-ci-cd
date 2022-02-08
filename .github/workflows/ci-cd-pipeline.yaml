@@ -23,6 +23,3 @@ jobs:
       - name: Build our app 🔧 
         run: dotnet build -c Release --no-restore
 
-
-
-
