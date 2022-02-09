@@ -20,6 +20,9 @@ jobs:
       - name: Restore dependencies ⚙
         run: dotnet restore
 
+      - name: Add Xunit ✖
+        run: dotnet add package xUnit
+
       - name: Build our app 🔧 
         run: dotnet build -c Release --no-restore
 
