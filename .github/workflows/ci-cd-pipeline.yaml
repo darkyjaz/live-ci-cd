@@ -3,7 +3,10 @@ name: Continuous Integration and Deployment
 on:
   push:
     branches:
-      - main 
+      - main
+
+env:
+  DOTNET_VERSION: '6.0.x'
 
 jobs:
   build:
@@ -15,7 +18,7 @@ jobs:
       - name: Setup .Net 6 🔨 
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: ${{ env.DOTNET_VERSION }}
 
       - name: Restore dependencies ⚙
         run: dotnet restore
