@@ -25,10 +25,14 @@ jobs:
 
       - name: Add Xunit ✖
         run: dotnet add package xUnit
+      
+      - name: Install Test SDK
+        run: dotnet add package Microsoft.NET.Test.Sdk
 
       - name: Build our app 🔧 
         run: dotnet build -c Release --no-restore
 
       - name: Run automated test ✔
         run: dotnet test -c Release --no-restore
+        working-directory: live-ci-cd/SimpleTests
 
