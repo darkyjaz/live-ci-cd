@@ -34,5 +34,5 @@ jobs:
 
       - name: Run automated test ✔
         run: dotnet test -c Release --no-restore
-        working-directory: SimpleTests
+        working-directory: ./SimpleTests
 
