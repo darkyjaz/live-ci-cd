@@ -37,6 +37,6 @@ jobs:
 
       - name: Run automated test ✔
         env:
-          ConnectionStrings__DefaultConnection: Server=localhost;Databse=CicdDemo_Test;User=sa;Password=yourStrong(!)Password
+          ConnectionStrings__DefaultConnection: Server=localhost;Database=CicdDemo_Test;User=sa;Password=yourStrong(!)Password
         run: dotnet test -c Release --no-restore
 
